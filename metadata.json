@@ -1,0 +1,8 @@
+{
+  "name": "DZ SERVICES - منصة الخدمات الجزائرية",
+  "description": "منصة جزائرية احترافية لعرض وطلب الخدمات والإعلانات في مختلف الولايات الـ 58 مع لوحة إدارة ذكية وتواصل مباشر عبر واتساب.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

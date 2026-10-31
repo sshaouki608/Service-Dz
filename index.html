@@ -1,0 +1,2799 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DZ SERVICES | منصة الخدمات الجزائرية الأولى</title>
+  <meta name="description" content="منصة DZ SERVICES - المنصة الجزائرية الشاملة لعرض وطلب الخدمات والإعلانات في كافة الولايات الـ 58. تواصل مباشر مع الحرفيين ومقدمي الخدمات عبر واتساب." />
+  <meta name="keywords" content="خدمات جزائرية, حرفيين الجزائر, كهرباء, سباكة, ميكانيك, دهان, برمجة, وهران, قسنطينة, الجزائر العاصمة, سطيف, عنابة, DZ services" />
+  <meta name="author" content="DZ SERVICES" />
+
+  <!-- OpenGraph / Social Meta Tags -->
+  <meta property="og:title" content="DZ SERVICES | منصة الخدمات الجزائرية الأولى" />
+  <meta property="og:description" content="تصفح وأضف الخدمات والإعلانات في جميع ولايات الجزائر. تواصل فوري ومباشر مع الحرفيين ومقدمي الخدمات بدون وسيط." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/assets/icons/logo.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Typography: Tajawal & Cairo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Embedded Comprehensive Stylesheet (Merged from animations, style, and responsive) -->
+  <style>
+/* ==========================================================================
+   1. Animations & Keyframes (animations.css)
+   ========================================================================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(245, 158, 11, 0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes toastSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(24px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) scale(1);
+  }
+}
+
+@keyframes toastSlideOut {
+  from {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-50%) translateY(24px) scale(0.95);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.skeleton {
+  background: linear-gradient(90deg, var(--color-skeleton-base) 25%, var(--color-skeleton-highlight) 37%, var(--color-skeleton-base) 63%);
+  background-size: 400% 100%;
+  animation: shimmer 1.6s ease-in-out infinite;
+  border-radius: var(--radius-sm);
+}
+
+.btn-hover-effect {
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
+}
+.btn-hover-effect:hover {
+  transform: translateY(-2px);
+}
+.btn-hover-effect:active {
+  transform: translateY(1px);
+}
+
+.card-hover-effect {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
+}
+.card-hover-effect:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 30px -10px rgba(16, 27, 50, 0.12);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal-on-scroll {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ==========================================================================
+   2. Main Stylesheet & Design Tokens (style.css)
+   ========================================================================== */
+:root {
+  --color-primary: #101B32;
+  --color-primary-light: #1A294A;
+  --color-primary-dark: #0A1120;
+  
+  --color-gold: #F59E0B;
+  --color-gold-hover: #D97706;
+  --color-gold-light: #FEF3C7;
+  --color-gold-subtle: rgba(245, 158, 11, 0.12);
+
+  --color-success: #10B981;
+  --color-success-light: #D1FAE5;
+  --color-danger: #EF4444;
+  --color-danger-light: #FEE2E2;
+  --color-warning: #F59E0B;
+  --color-info: #3B82F6;
+
+  --bg-page: #F8FAFC;
+  --bg-surface: #FFFFFF;
+  --bg-surface-elevated: #FFFFFF;
+  --bg-muted: #F1F5F9;
+  --bg-header: rgba(255, 255, 255, 0.94);
+
+  --border-light: #E2E8F0;
+  --border-strong: #CBD5E1;
+
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --text-subtle: #94A3B8;
+  --text-inverse: #FFFFFF;
+
+  --color-skeleton-base: #E2E8F0;
+  --color-skeleton-highlight: #F1F5F9;
+
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(16, 27, 50, 0.07), 0 2px 4px -2px rgba(16, 27, 50, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(16, 27, 50, 0.09), 0 4px 6px -4px rgba(16, 27, 50, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(16, 27, 50, 0.12), 0 8px 10px -6px rgba(16, 27, 50, 0.08);
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  --container-max: 1280px;
+  --container-padding: 24px;
+  --header-height: 76px;
+}
+
+[data-theme="dark"] {
+  --bg-page: #0B132B;
+  --bg-surface: #101B32;
+  --bg-surface-elevated: #162442;
+  --bg-muted: #1A2B4C;
+  --bg-header: rgba(16, 27, 50, 0.95);
+
+  --border-light: #1E3054;
+  --border-strong: #2A4372;
+
+  --text-main: #F8FAFC;
+  --text-muted: #94A3B8;
+  --text-subtle: #64748B;
+  --text-inverse: #0F172A;
+
+  --color-skeleton-base: #162442;
+  --color-skeleton-highlight: #1E3054;
+
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.6);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Tajawal', 'Cairo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  direction: rtl;
+  text-align: right;
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  color: inherit;
+  border: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  background: transparent;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-padding);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 20px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background-color: var(--color-gold);
+  color: #101B32;
+  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.3);
+}
+.btn-primary:hover {
+  background-color: var(--color-gold-hover);
+  color: #FFFFFF;
+  box-shadow: 0 6px 20px rgba(245, 158, 11, 0.45);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+  border-color: var(--color-primary-light);
+}
+.btn-secondary:hover {
+  background-color: var(--color-primary-light);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 1.5px solid var(--border-strong);
+  color: var(--text-main);
+}
+.btn-outline:hover {
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+  background-color: var(--color-gold-subtle);
+}
+
+.btn-sm {
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  border-radius: var(--radius-sm);
+}
+
+.btn-lg {
+  padding: 14px 28px;
+  font-size: 1.05rem;
+  border-radius: var(--radius-md);
+}
+
+.btn-whatsapp {
+  background-color: #25D366;
+  color: #FFFFFF;
+  font-weight: 700;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
+}
+.btn-whatsapp:hover {
+  background-color: #20BD5A;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.4);
+}
+
+.icon-btn {
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+  background-color: var(--bg-surface);
+  color: var(--text-main);
+  transition: all 0.2s ease;
+}
+.icon-btn:hover {
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+  background-color: var(--color-gold-subtle);
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--bg-header);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-light);
+  height: var(--header-height);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.header-inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+.brand-logo img, .brand-logo svg {
+  height: 44px;
+  width: auto;
+}
+
+.nav-desktop {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+.nav-link {
+  font-weight: 600;
+  font-size: 0.98rem;
+  color: var(--text-muted);
+  position: relative;
+  padding-block: 6px;
+  transition: color 0.2s ease;
+}
+.nav-link:hover, .nav-link.active {
+  color: var(--color-gold);
+}
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 2.5px;
+  background-color: var(--color-gold);
+  border-radius: var(--radius-full);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.badge-counter {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  background-color: var(--color-gold);
+  color: #101B32;
+  font-size: 0.7rem;
+  font-weight: 800;
+  width: 18px;
+  height: 18px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-toggle-btn {
+  display: none;
+}
+
+.hero-section {
+  position: relative;
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+  padding-block: 70px 60px;
+  overflow: hidden;
+  border-bottom: 3px solid var(--color-gold);
+}
+
+.hero-pattern {
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80' fill='none'%3E%3Cpath d='M40 0L80 40L40 80L0 40L40 0Z' stroke='rgba(245, 158, 11, 0.08)' stroke-width='1.2' fill='none'/%3E%3Ccircle cx='40' cy='40' r='14' stroke='rgba(245, 158, 11, 0.06)' stroke-width='1' fill='none'/%3E%3Ccircle cx='40' cy='40' r='4' fill='rgba(245, 158, 11, 0.12)'/%3E%3Cpath d='M40 20V60M20 40H60' stroke='rgba(255, 255, 255, 0.03)' stroke-width='1'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 70px 70px;
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+.hero-glow-1 {
+  position: absolute;
+  top: -100px;
+  right: 10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.18) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero-glow-2 {
+  position: absolute;
+  bottom: -100px;
+  left: 5%;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(30, 58, 138, 0.4) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  background: rgba(245, 158, 11, 0.15);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  border-radius: var(--radius-full);
+  color: var(--color-gold);
+  font-size: 0.88rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero-title {
+  font-size: 2.75rem;
+  font-weight: 900;
+  line-height: 1.25;
+  margin-bottom: 18px;
+  letter-spacing: -0.5px;
+}
+
+.hero-title span {
+  color: var(--color-gold);
+  position: relative;
+}
+
+.hero-desc {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #CBD5E1;
+  margin-bottom: 36px;
+  max-width: 720px;
+  margin-inline: auto;
+}
+
+.hero-search-wrapper {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: var(--radius-lg);
+  padding: 10px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  margin-bottom: 28px;
+}
+
+.hero-search-form {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr 1.2fr auto;
+  gap: 10px;
+  align-items: center;
+}
+
+.search-field {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--bg-surface);
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+  border: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+.search-field:focus-within {
+  border-color: var(--color-gold);
+}
+.search-field svg {
+  color: var(--color-gold);
+  flex-shrink: 0;
+}
+.search-field input, .search-field select {
+  width: 100%;
+  background: transparent;
+  color: var(--text-main);
+  font-size: 0.95rem;
+}
+.search-field select option {
+  background-color: var(--bg-surface);
+  color: var(--text-main);
+}
+
+.hero-ctas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.section-padding {
+  padding-block: 70px;
+}
+
+.section-header {
+  margin-bottom: 40px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.section-titles {
+  max-width: 650px;
+}
+
+.section-subtitle {
+  color: var(--color-gold);
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-main);
+  line-height: 1.3;
+}
+
+.section-description {
+  color: var(--text-muted);
+  font-size: 1rem;
+  margin-top: 6px;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 18px;
+}
+
+.category-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 22px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.category-card:hover, .category-card.active {
+  border-color: var(--color-gold);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -6px rgba(245, 158, 11, 0.15);
+}
+
+.category-card.active {
+  background-color: var(--color-gold-subtle);
+}
+
+.category-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: var(--radius-md);
+  background-color: var(--bg-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  color: var(--color-gold);
+  transition: all 0.2s ease;
+}
+
+.category-card:hover .category-icon {
+  background-color: var(--color-gold);
+  color: #101B32;
+  transform: scale(1.08);
+}
+
+.category-name {
+  font-weight: 700;
+  font-size: 0.98rem;
+  color: var(--text-main);
+  margin-bottom: 4px;
+}
+
+.category-count {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.services-section {
+  background-color: var(--bg-page);
+}
+
+.filters-bar {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 16px 20px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  box-shadow: var(--shadow-sm);
+}
+
+.filters-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.filter-select {
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  background-color: var(--bg-muted);
+  border: 1px solid var(--border-light);
+  font-size: 0.9rem;
+  color: var(--text-main);
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+.filter-select:focus {
+  border-color: var(--color-gold);
+}
+
+.active-filters-chips {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+.filter-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  color: var(--text-main);
+}
+.filter-chip-remove {
+  cursor: pointer;
+  color: var(--color-danger);
+  font-weight: bold;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.service-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-xl);
+  border-color: rgba(245, 158, 11, 0.5);
+}
+
+.card-img-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background-color: var(--bg-muted);
+  overflow: hidden;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.service-card:hover .card-img {
+  transform: scale(1.05);
+}
+
+.featured-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: var(--color-gold);
+  color: #101B32;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.favorite-btn {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  background-color: rgba(16, 27, 50, 0.7);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  transition: all 0.2s ease;
+}
+.favorite-btn:hover {
+  background-color: var(--color-danger);
+  transform: scale(1.1);
+}
+.favorite-btn.is-favorited {
+  background-color: var(--color-danger);
+  color: #FFFFFF;
+}
+
+.card-category-tag {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background-color: rgba(16, 27, 50, 0.85);
+  backdrop-filter: blur(4px);
+  color: #F8FAFC;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.card-body {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card-wilaya {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.card-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text-main);
+  line-height: 1.4;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: 2.8em;
+}
+
+.card-provider {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+.provider-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-gold-subtle);
+  color: var(--color-gold);
+  border: 1px solid var(--color-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+.provider-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.card-footer {
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.card-price {
+  display: flex;
+  flex-direction: column;
+}
+.price-label {
+  font-size: 0.72rem;
+  color: var(--text-subtle);
+}
+.price-value {
+  font-size: 1.15rem;
+  font-weight: 900;
+  color: var(--color-gold);
+}
+.price-currency {
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-right: 2px;
+}
+
+.empty-state {
+  grid-column: 1 / -1;
+  background-color: var(--bg-surface);
+  border: 2px dashed var(--border-strong);
+  border-radius: var(--radius-xl);
+  padding: 60px 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-state-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-gold-subtle);
+  color: var(--color-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.empty-state-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 10px;
+}
+
+.empty-state-desc {
+  color: var(--text-muted);
+  max-width: 500px;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.skeleton-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  gap: 12px;
+}
+.skeleton-img {
+  width: 100%;
+  height: 180px;
+  border-radius: var(--radius-md);
+}
+.skeleton-text {
+  height: 20px;
+  width: 80%;
+  border-radius: var(--radius-sm);
+}
+.skeleton-text-sm {
+  height: 14px;
+  width: 50%;
+  border-radius: var(--radius-sm);
+}
+
+.how-it-works-section {
+  background-color: var(--bg-surface);
+  border-block: 1px solid var(--border-light);
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.step-card {
+  padding: 30px 20px;
+  border-radius: var(--radius-lg);
+  background-color: var(--bg-muted);
+  border: 1px solid var(--border-light);
+  position: relative;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+.step-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-gold);
+}
+
+.step-number {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: var(--color-gold);
+  opacity: 0.4;
+  line-height: 1;
+}
+
+.step-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-primary);
+  color: var(--color-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px;
+}
+
+.step-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 10px;
+}
+
+.step-desc {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.stats-section {
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+  padding-block: 50px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+  text-align: center;
+}
+
+.stat-item {
+  padding: 16px;
+}
+.stat-value {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: var(--color-gold);
+  line-height: 1.1;
+  margin-bottom: 6px;
+  font-variant-numeric: tabular-nums;
+}
+.stat-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #CBD5E1;
+}
+
+.cta-banner {
+  background: linear-gradient(135deg, var(--color-primary) 0%, #1A294A 100%);
+  border-radius: var(--radius-xl);
+  padding: 50px 40px;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  box-shadow: var(--shadow-xl);
+}
+.cta-content {
+  max-width: 600px;
+  z-index: 2;
+}
+.cta-title {
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+.cta-desc {
+  color: #CBD5E1;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.site-footer {
+  background-color: var(--color-primary);
+  color: #94A3B8;
+  margin-top: auto;
+  border-top: 3px solid var(--color-gold);
+}
+
+.footer-top {
+  padding-block: 60px 40px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 40px;
+}
+
+.footer-col h4 {
+  color: #FFFFFF;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 8px;
+}
+.footer-col h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 30px;
+  height: 2px;
+  background-color: var(--color-gold);
+}
+
+.footer-desc {
+  line-height: 1.7;
+  font-size: 0.92rem;
+  margin-top: 14px;
+  color: #CBD5E1;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+.footer-links a {
+  color: #CBD5E1;
+  font-size: 0.92rem;
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: inline-block;
+}
+.footer-links a:hover {
+  color: var(--color-gold);
+  transform: translateX(-4px);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-block: 22px;
+  font-size: 0.88rem;
+}
+
+.footer-bottom-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.admin-secret-link {
+  color: #64748B;
+  font-size: 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.05);
+  transition: all 0.2s ease;
+}
+.admin-secret-link:hover {
+  color: var(--color-gold);
+  background: rgba(245, 158, 11, 0.15);
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(10, 17, 32, 0.75);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.modal-overlay.is-active {
+  display: flex;
+  opacity: 1;
+}
+
+.modal-dialog {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  width: 100%;
+  max-width: 650px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: var(--shadow-xl);
+  transform: scale(0.95);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-dialog-lg {
+  max-width: 900px;
+}
+
+.modal-overlay.is-active .modal-dialog {
+  transform: scale(1);
+}
+
+.modal-header {
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  position: sticky;
+  top: 0;
+  background-color: var(--bg-surface);
+  z-index: 10;
+}
+
+.modal-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.modal-close-btn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  color: var(--text-muted);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.modal-close-btn:hover {
+  background-color: var(--bg-muted);
+  color: var(--color-danger);
+}
+
+.modal-body {
+  padding: 24px;
+}
+
+.modal-footer {
+  padding: 16px 24px;
+  border-top: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  background-color: var(--bg-muted);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 8px;
+}
+.form-label.required::after {
+  content: ' *';
+  color: var(--color-danger);
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: var(--radius-md);
+  background-color: var(--bg-surface);
+  border: 1.5px solid var(--border-light);
+  color: var(--text-main);
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.form-control:focus {
+  border-color: var(--color-gold);
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.15);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-hint {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 5px;
+}
+
+.form-error {
+  font-size: 0.8rem;
+  color: var(--color-danger);
+  margin-top: 5px;
+  display: none;
+}
+.has-error .form-control {
+  border-color: var(--color-danger);
+}
+.has-error .form-error {
+  display: block;
+}
+
+.image-upload-zone {
+  border: 2px dashed var(--border-strong);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  text-align: center;
+  cursor: pointer;
+  background-color: var(--bg-muted);
+  transition: all 0.2s ease;
+  position: relative;
+}
+.image-upload-zone:hover {
+  border-color: var(--color-gold);
+  background-color: var(--color-gold-subtle);
+}
+
+.image-preview-container {
+  display: none;
+  margin-top: 14px;
+  position: relative;
+  width: 100%;
+  height: 220px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-light);
+}
+.image-preview-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.image-remove-btn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(239, 68, 68, 0.9);
+  color: #FFFFFF;
+  border-radius: var(--radius-full);
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.service-details-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 28px;
+}
+
+.details-media {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background-color: var(--bg-muted);
+  aspect-ratio: 4 / 3;
+}
+.details-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.details-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+.details-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.details-price-badge {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 4px;
+  background-color: var(--color-gold-subtle);
+  border: 1px solid var(--color-gold);
+  color: var(--color-gold-hover);
+  padding: 6px 16px;
+  border-radius: var(--radius-md);
+  font-weight: 900;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+[data-theme="dark"] .details-price-badge {
+  color: var(--color-gold);
+}
+
+.details-desc {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text-main);
+  white-space: pre-line;
+  margin-bottom: 24px;
+  background-color: var(--bg-muted);
+  padding: 18px;
+  border-radius: var(--radius-md);
+}
+
+.contact-action-box {
+  background-color: var(--bg-surface);
+  border: 1.5px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-provider-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.safety-note {
+  margin-top: 16px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  background: var(--bg-muted);
+  border-right: 3px solid var(--color-gold);
+  padding: 10px 14px;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  line-height: 1.5;
+}
+
+.admin-badge {
+  background-color: var(--color-danger);
+  color: #FFFFFF;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+}
+
+.admin-tabs {
+  display: flex;
+  gap: 8px;
+  border-bottom: 1px solid var(--border-light);
+  margin-bottom: 24px;
+  overflow-x: auto;
+}
+.admin-tab-btn {
+  padding: 10px 18px;
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+.admin-tab-btn:hover {
+  color: var(--color-gold);
+}
+.admin-tab-btn.active {
+  color: var(--color-gold);
+  border-color: var(--color-gold);
+}
+
+.admin-stats-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 14px;
+  margin-bottom: 24px;
+}
+.admin-stat-card {
+  background-color: var(--bg-muted);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  text-align: center;
+}
+.admin-stat-num {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: var(--text-main);
+}
+.admin-stat-text {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.admin-table-wrapper {
+  overflow-x: auto;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+  text-align: right;
+}
+.admin-table th {
+  background-color: var(--bg-muted);
+  padding: 12px 16px;
+  color: var(--text-muted);
+  font-weight: 700;
+  border-bottom: 1px solid var(--border-light);
+}
+.admin-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border-light);
+  color: var(--text-main);
+  vertical-align: middle;
+}
+.admin-table tr:hover td {
+  background-color: var(--bg-muted);
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+.status-published {
+  background-color: var(--color-success-light);
+  color: #065F46;
+}
+.status-pending {
+  background-color: var(--color-gold-light);
+  color: #92400E;
+}
+.status-rejected {
+  background-color: var(--color-danger-light);
+  color: #991B1B;
+}
+
+.table-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+#toast-container {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  pointer-events: none;
+  width: 90%;
+  max-width: 440px;
+}
+
+.toast {
+  pointer-events: auto;
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  border-right: 4px solid var(--color-gold);
+  animation: toastSlideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+.toast.toast-success {
+  border-right-color: var(--color-success);
+}
+.toast.toast-danger {
+  border-right-color: var(--color-danger);
+}
+.toast.toast-warning {
+  border-right-color: var(--color-warning);
+}
+.toast.toast-closing {
+  animation: toastSlideOut 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.mobile-drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(10, 17, 32, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+.mobile-drawer-overlay.is-active {
+  display: block;
+  opacity: 1;
+}
+
+.mobile-drawer {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: -320px;
+  width: 300px;
+  background-color: var(--bg-surface);
+  z-index: 1001;
+  box-shadow: var(--shadow-xl);
+  display: flex;
+  flex-direction: column;
+  transition: right 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: 24px;
+}
+.mobile-drawer-overlay.is-active .mobile-drawer {
+  right: 0;
+}
+
+.mobile-drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+.mobile-drawer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.mobile-drawer-links a {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-main);
+  padding-block: 8px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+/* ==========================================================================
+   3. Responsive Rules (responsive.css)
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .hero-title {
+    font-size: 2.3rem;
+  }
+
+  .hero-search-form {
+    grid-template-columns: 1fr 1fr;
+  }
+  .hero-search-form .btn {
+    grid-column: 1 / -1;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  .service-details-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --header-height: 68px;
+    --container-padding: 16px;
+  }
+
+  .nav-desktop {
+    display: none;
+  }
+
+  .menu-toggle-btn {
+    display: inline-flex;
+  }
+
+  .hero-section {
+    padding-block: 45px 40px;
+  }
+
+  .hero-title {
+    font-size: 1.85rem;
+  }
+
+  .hero-desc {
+    font-size: 1rem;
+    margin-bottom: 24px;
+  }
+
+  .hero-search-form {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .section-padding {
+    padding-block: 45px;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .category-card {
+    padding: 16px 12px;
+  }
+  .category-icon {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 10px;
+  }
+
+  .filters-bar {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 14px;
+  }
+
+  .filters-group {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .filter-select {
+    width: 100%;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .modal-dialog {
+    margin: 10px;
+    max-height: 94vh;
+  }
+
+  .modal-body {
+    padding: 16px;
+  }
+
+  .cta-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+  }
+  .cta-title {
+    font-size: 1.5rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .footer-bottom-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero-title {
+    font-size: 1.6rem;
+  }
+
+  .hero-ctas {
+    flex-direction: column;
+    width: 100%;
+  }
+  .hero-ctas .btn {
+    width: 100%;
+  }
+
+  .categories-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <!-- ========================================================================
+       1. Site Header & Navigation
+       ======================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <!-- Logo -->
+      <a href="#" class="brand-logo" title="DZ SERVICES - الرئيسية">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="180" height="46" fill="none">
+          <g transform="translate(10, 6)">
+            <path d="M24 2L44 12V32C44 42 24 47 24 47C24 47 4 42 4 32V12L24 2Z" fill="#101B32" stroke="#F59E0B" stroke-width="2.5" stroke-linejoin="round"/>
+            <path d="M26 15C21 16 18 20.5 19.5 25.5C21 30.5 26 33.5 30.5 32C25.5 35 18 31 16.5 25C15 19 19.5 14 26 15Z" fill="#F59E0B"/>
+            <polygon points="26,19 27.5,23 31.5,23.5 28.5,26 29.5,30 26,27.5 22.5,30 23.5,26 20.5,23.5 24.5,23" fill="#FFFFFF"/>
+          </g>
+          <text x="64" y="32" font-family="'Tajawal', sans-serif" font-weight="900" font-size="24" fill="#F59E0B" letter-spacing="1">DZ</text>
+          <text x="102" y="32" font-family="'Tajawal', sans-serif" font-weight="800" font-size="22" fill="currentColor">SERVICES</text>
+          <text x="65" y="47" font-family="'Tajawal', sans-serif" font-weight="600" font-size="10.5" fill="#94A3B8">منصة الخدمات الجزائرية</text>
+        </svg>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-desktop">
+        <a href="#hero-section" class="nav-link active">الرئيسية</a>
+        <a href="#categories-section" class="nav-link">التصنيفات</a>
+        <a href="#services-section" class="nav-link">تصفح الخدمات</a>
+        <a href="#how-it-works-section" class="nav-link">كيف تعمل المنصة</a>
+        <a href="#stats-section" class="nav-link">الإحصائيات</a>
+      </nav>
+
+      <!-- Header Action Controls -->
+      <div class="header-actions">
+        <!-- Theme Toggle -->
+        <button class="icon-btn theme-toggle-btn" title="تبديل الوضع الليلي / النهاري" aria-label="تبديل الوضع">
+          <svg class="theme-icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+          <svg class="theme-icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;">
+            <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+        </button>
+
+        <!-- Favorites Button -->
+        <button class="icon-btn" id="header-favorites-btn" style="position:relative;" title="المفضلة" aria-label="المفضلة">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+          <span class="badge-counter" id="favorites-count-badge" style="display:none;">0</span>
+        </button>
+
+        <!-- Add Service Button -->
+        <button class="btn btn-primary" id="header-add-service-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+          </svg>
+          <span>أضف خدمة</span>
+        </button>
+
+        <!-- Mobile Menu Hamburger -->
+        <button class="icon-btn menu-toggle-btn" id="menu-toggle-btn" title="القائمة" aria-label="فتح القائمة">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer-overlay" id="mobile-drawer-overlay">
+    <div class="mobile-drawer">
+      <div class="mobile-drawer-header">
+        <h3 style="font-weight: 800; color: var(--color-gold);">القائمة الرئيسية</h3>
+        <button class="modal-close-btn" id="mobile-drawer-close">&times;</button>
+      </div>
+      <div class="mobile-drawer-links">
+        <a href="#hero-section">الرئيسية</a>
+        <a href="#categories-section">التصنيفات</a>
+        <a href="#services-section">تصفح الخدمات</a>
+        <a href="#how-it-works-section">كيف تعمل المنصة</a>
+        <a href="#stats-section">الإحصائيات</a>
+      </div>
+      <div style="margin-top: auto; padding-top: 20px;">
+        <button class="btn btn-primary" style="width: 100%;" id="mobile-add-service-btn">
+          + أضف خدمة جديدة
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ========================================================================
+         2. Hero Section
+         ======================================================================== -->
+    <section class="hero-section" id="hero-section">
+      <div class="hero-pattern"></div>
+      <div class="hero-glow-1"></div>
+      <div class="hero-glow-2"></div>
+
+      <div class="container hero-content">
+        <div class="hero-tag">
+          <span>🇩🇿</span>
+          <span>المنصة الأولى المخصصة للخدمات في 58 ولاية</span>
+        </div>
+
+        <h1 class="hero-title">
+          ابحث عن أفضل الحرفيين والخدمات <br/>
+          أو <span>اعرض مهاراتك</span> لآلاف العملاء
+        </h1>
+
+        <p class="hero-desc">
+          منصة DZ SERVICES تجمع بين أصحاب المهارات والباحثين عن خدمات موثوقة في الجزائر.
+          تواصل مباشر وسريع عبر واتساب والهاتف بدون وسيط وبكل شفافية.
+        </p>
+
+        <!-- Interactive Search Bar -->
+        <div class="hero-search-wrapper">
+          <form class="hero-search-form" id="hero-search-form">
+            <!-- Keyword -->
+            <div class="search-field">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+              </svg>
+              <input type="text" id="hero-keyword-input" placeholder="ما هي الخدمة التي تبحث عنها؟ (كهرباء، دهان، سباكة...)" autocomplete="off" />
+            </div>
+
+            <!-- Category -->
+            <div class="search-field">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+              </svg>
+              <select id="hero-category-select">
+                <option value="">جميع التصنيفات</option>
+              </select>
+            </div>
+
+            <!-- Wilaya -->
+            <div class="search-field">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+              </svg>
+              <select id="hero-wilaya-select">
+                <option value="">كل ولايات الجزائر (58)</option>
+              </select>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary btn-lg">
+              <span>ابحث الآن</span>
+            </button>
+          </form>
+        </div>
+
+        <!-- Quick CTAs -->
+        <div class="hero-ctas">
+          <a href="#services-section" class="btn btn-outline" style="border-color: rgba(255,255,255,0.4); color:#FFFFFF;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="5 3 19 12 5 21 5 3"/>
+            </svg>
+            <span>تصفح الخدمات المعروضة</span>
+          </a>
+          <button class="btn btn-primary" id="hero-add-service-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+            </svg>
+            <span>أضف خدمتك مجاناً</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         3. Categories Section
+         ======================================================================== -->
+    <section class="section-padding" id="categories-section">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="section-titles">
+            <span class="section-subtitle">مجالات المنصة</span>
+            <h2 class="section-title">تصنيفات الخدمات المتوفرة</h2>
+            <p class="section-description">اختر المجال الذي يناسب احتياجك للوصول السريع إلى المحترفين في منطقتك</p>
+          </div>
+        </div>
+
+        <div class="categories-grid" id="categories-grid">
+          <!-- Populated dynamically via app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         4. Featured Services Section (Appears when featured services exist)
+         ======================================================================== -->
+    <section class="section-padding" id="featured-section" style="display:none; background-color: var(--bg-muted);">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="section-titles">
+            <span class="section-subtitle">الخدمات الموصى بها</span>
+            <h2 class="section-title">⭐ خدمات مميزة ومختارة</h2>
+            <p class="section-description">أبرز الخدمات التي تحظى بتقييمات واهتمام خاص من إدارة المنصة</p>
+          </div>
+        </div>
+        <div class="services-grid" id="featured-services-grid">
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         5. All Services Showcase & Filter Bar
+         ======================================================================== -->
+    <section class="section-padding services-section" id="services-section">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="section-titles">
+            <span class="section-subtitle">دليل الخدمات</span>
+            <h2 class="section-title">أحدث الخدمات والإعلانات</h2>
+            <p class="section-description">تصفح الخدمات المضافة حديثاً مع إمكانية التصفية المباشرة والفرز الذكي</p>
+          </div>
+        </div>
+
+        <!-- Filters Bar -->
+        <div class="filters-bar">
+          <div class="filters-group">
+            <!-- Keyword search -->
+            <input type="text" id="filter-keyword-input" class="form-control" style="max-width: 260px; padding: 8px 12px;" placeholder="بحث بالعنوان، الاسم، الوصف..." />
+
+            <!-- Category filter -->
+            <select id="filter-category-select" class="filter-select">
+              <option value="">كل التصنيفات</option>
+            </select>
+
+            <!-- Wilaya filter -->
+            <select id="filter-wilaya-select" class="filter-select">
+              <option value="">كل الولايات (58)</option>
+            </select>
+
+            <!-- Sort By -->
+            <select id="filter-sort-select" class="filter-select">
+              <option value="newest">الأحدث أولاً</option>
+              <option value="oldest">الأقدم أولاً</option>
+              <option value="price_asc">السعر: من الأقل للأعلى</option>
+              <option value="price_desc">السعر: من الأعلى للأقل</option>
+              <option value="featured">الخدمات المميزة أولاً</option>
+            </select>
+          </div>
+
+          <button class="btn btn-outline btn-sm" id="filter-reset-btn" title="مسح جميع الفلاتر">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+              <path d="M3 3v5h5"/>
+            </svg>
+            <span>إعادة ضبط الفلاتر</span>
+          </button>
+        </div>
+
+        <!-- Active Filter Chips -->
+        <div class="active-filters-chips" id="active-filters-chips" style="display:none;"></div>
+
+        <!-- Services Grid or Empty State -->
+        <div class="services-grid" id="services-grid">
+          <!-- Populated dynamically via search & services modules -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         6. How It Works Section
+         ======================================================================== -->
+    <section class="section-padding how-it-works-section" id="how-it-works-section">
+      <div class="container">
+        <div class="section-header reveal-on-scroll" style="text-align: center; justify-content: center;">
+          <div class="section-titles" style="text-align: center; margin-inline: auto;">
+            <span class="section-subtitle">بساطة وسرعة</span>
+            <h2 class="section-title">كيف تستخدم منصة DZ SERVICES؟</h2>
+            <p class="section-description">أربع خطوات سهلة تبدأ بها سواء كنت تبحث عن خدمة أو تقدم خدماتك للعملاء</p>
+          </div>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-card reveal-on-scroll">
+            <span class="step-number">01</span>
+            <div class="step-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+              </svg>
+            </div>
+            <h3 class="step-title">1. ابحث عن خدمتك</h3>
+            <p class="step-desc">استخدم مربع البحث وحدد ولايتك والتصنيف المناسب للعثور على أقرب الحرفيين والخبراء إليك.</p>
+          </div>
+
+          <div class="step-card reveal-on-scroll">
+            <span class="step-number">02</span>
+            <div class="step-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+              </svg>
+            </div>
+            <h3 class="step-title">2. تواصل عبر واتساب</h3>
+            <p class="step-desc">بنقرة زر واحدة، تفتح المحادثة المباشرة مع صاحب الخدمة مع رسالة جاهزة تتضمن تفاصيل الإعلان.</p>
+          </div>
+
+          <div class="step-card reveal-on-scroll">
+            <span class="step-number">03</span>
+            <div class="step-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/>
+              </svg>
+            </div>
+            <h3 class="step-title">3. اتفق واستلم الخدمة</h3>
+            <p class="step-desc">ناقش التفاصيل، اتفق على السعر والوقت المناسب، وأنجز عملك بأمان وبدون أي عمولات أو وسائط.</p>
+          </div>
+
+          <div class="step-card reveal-on-scroll">
+            <span class="step-number">04</span>
+            <div class="step-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+              </svg>
+            </div>
+            <h3 class="step-title">4. أو انشر خدمتك</h3>
+            <p class="step-desc">هل لديك حرفة أو مهارة؟ اضغط على "أضف خدمة" وانشر إعلانك مجاناً لتصل إلى آلاف الجزائريين يومياً.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         7. Statistics Section
+         ======================================================================== -->
+    <section class="stats-section" id="stats-section">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item reveal-on-scroll">
+            <div class="stat-value" id="stat-counter-services">0</div>
+            <div class="stat-label">خدمة معتمدة ومنشورة</div>
+          </div>
+          <div class="stat-item reveal-on-scroll">
+            <div class="stat-value" id="stat-counter-wilayas">58</div>
+            <div class="stat-label">ولاية جزائرية مغطاة</div>
+          </div>
+          <div class="stat-item reveal-on-scroll">
+            <div class="stat-value" id="stat-counter-providers">1</div>
+            <div class="stat-label">حرفي ومقدم خدمة مسجل</div>
+          </div>
+          <div class="stat-item reveal-on-scroll">
+            <div class="stat-value" id="stat-counter-views">100%</div>
+            <div class="stat-label">تواصل مباشر ومجاني</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         8. Call to Action Banner
+         ======================================================================== -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="cta-banner reveal-on-scroll">
+          <div class="cta-content">
+            <h2 class="cta-title">هل تقدم خدمات أو تمتلك حرفة في الجزائر؟</h2>
+            <p class="cta-desc">
+              لا تنتظر العملاء ليبحثوا عنك في الطرقات. انضم الآن إلى منصة DZ SERVICES واعرض خدماتك وصورك وأسعارك ليصل إليك مئات الزبائن في ولايتك بكل سهولة.
+            </p>
+          </div>
+          <button class="btn btn-primary btn-lg" id="cta-add-service-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+            </svg>
+            <span>أضف خدمتك مجاناً الآن</span>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       9. Footer
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="#" class="brand-logo" style="margin-bottom: 16px;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="180" height="46" fill="none">
+              <g transform="translate(10, 6)">
+                <path d="M24 2L44 12V32C44 42 24 47 24 47C24 47 4 42 4 32V12L24 2Z" fill="#101B32" stroke="#F59E0B" stroke-width="2.5"/>
+                <path d="M26 15C21 16 18 20.5 19.5 25.5C21 30.5 26 33.5 30.5 32C25.5 35 18 31 16.5 25C15 19 19.5 14 26 15Z" fill="#F59E0B"/>
+                <polygon points="26,19 27.5,23 31.5,23.5 28.5,26 29.5,30 26,27.5 22.5,30 23.5,26 20.5,23.5 24.5,23" fill="#FFFFFF"/>
+              </g>
+              <text x="64" y="32" font-family="'Tajawal', sans-serif" font-weight="900" font-size="24" fill="#F59E0B">DZ</text>
+              <text x="102" y="32" font-family="'Tajawal', sans-serif" font-weight="800" font-size="22" fill="#FFFFFF">SERVICES</text>
+              <text x="65" y="47" font-family="'Tajawal', sans-serif" font-weight="600" font-size="10.5" fill="#94A3B8">منصة الخدمات الجزائرية</text>
+            </svg>
+          </a>
+          <p class="footer-desc">
+            DZ SERVICES هي منصة جزائرية رقمية متطورة تهدف إلى تسهيل الوصول إلى خدمات الصيانة، البناء، التصليح، المهن الحرة، والخدمات الرقمية في كافة التراب الوطني الجزائري.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>روابط سريعة</h4>
+          <ul class="footer-links">
+            <li><a href="#hero-section">الرئيسية</a></li>
+            <li><a href="#categories-section">أقسام الخدمات</a></li>
+            <li><a href="#services-section">تصفح الخدمات</a></li>
+            <li><a href="#how-it-works-section">دليل الاستخدام</a></li>
+            <li><a href="#stats-section">إحصائيات المنصة</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>أهم الولايات</h4>
+          <ul class="footer-links">
+            <li><a href="#services-section">الجزائر العاصمة</a></li>
+            <li><a href="#services-section">وهران</a></li>
+            <li><a href="#services-section">قسنطينة</a></li>
+            <li><a href="#services-section">سطيف</a></li>
+            <li><a href="#services-section">عنابة والبليدة</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>الأمان والدعم</h4>
+          <p class="footer-desc">
+            ننصح دائماً بالتأكد من تفاصيل الخدمة والاتفاق مع مقدمها في مكان آمن وعدم إرسال أي مبالغ مالية قبل بدء العمل أو استلام الخدمة.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <div class="footer-bottom-inner">
+        <div>
+          جميع الحقوق محفوظة &copy; 2025 - 2026 <strong>DZ SERVICES</strong> | صُنع بعناية فائقة للجزائر 🇩🇿
+        </div>
+        <div style="display:flex; align-items:center; gap:16px;">
+          <!-- Discreet Admin Link -->
+          <a href="#" class="admin-secret-link" id="admin-secret-trigger" title="لوحة التحكم الإدارية">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+            <span>لوحة الإدارة</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       10. Service Details Modal
+       ======================================================================== -->
+  <div class="modal-overlay" id="service-details-modal">
+    <div class="modal-dialog modal-dialog-lg">
+      <div class="modal-header">
+        <h3 class="modal-title" id="details-service-title">تفاصيل الخدمة</h3>
+        <button class="modal-close-btn">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="service-details-grid">
+          <!-- Left: Large Image & Provider Contact -->
+          <div>
+            <div class="details-media">
+              <img id="details-service-image" src="" alt="صورة الخدمة" />
+            </div>
+
+            <div class="contact-action-box" style="margin-top: 20px;">
+              <div class="contact-provider-row">
+                <div>
+                  <span style="font-size:0.8rem; color:var(--text-muted); display:block;">مقدم الخدمة:</span>
+                  <strong style="font-size:1.1rem; color:var(--text-main);" id="details-service-provider">-</strong>
+                </div>
+                <button class="btn btn-outline btn-sm" id="details-copy-phone-btn" title="نسخ رقم الهاتف">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                  </svg>
+                  <span>نسخ الرقم</span>
+                </button>
+              </div>
+
+              <!-- WhatsApp Direct Button -->
+              <a href="#" class="btn btn-whatsapp btn-lg" id="details-whatsapp-btn" style="width: 100%;">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.41a8.16 8.16 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.53c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.01-1.24-.74-.66-1.24-1.47-1.39-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.49-.4-.42-.56-.43h-.47c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.12.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.53.61.2 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.3"/>
+                </svg>
+                <span>مراسلة عبر واتساب</span>
+              </a>
+
+              <!-- Call Direct Button -->
+              <a href="#" class="btn btn-secondary" id="details-call-btn" style="width: 100%;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+                <span>اتصال هاتفي مباشر</span>
+              </a>
+
+              <button class="btn btn-outline" id="details-share-btn" style="width: 100%;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+                </svg>
+                <span>مشاركة هذا الإعلان</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Right: Details Info -->
+          <div>
+            <div class="details-meta-row">
+              <span class="details-meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span id="details-service-wilaya">-</span>
+              </span>
+              <span>•</span>
+              <span class="details-meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                <span id="details-service-category">-</span>
+              </span>
+              <span>•</span>
+              <span class="details-meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <span id="details-service-date">-</span>
+              </span>
+            </div>
+
+            <div class="details-price-badge" id="details-service-price">
+              -
+            </div>
+
+            <h4 style="font-size: 1.05rem; font-weight: 800; margin-bottom: 10px; color: var(--text-main);">وصف الخدمة:</h4>
+            <div class="details-desc" id="details-service-description">
+              -
+            </div>
+
+            <div class="safety-note">
+              🛡️ <strong>إرشادات السلامة للمتعاملين:</strong> يرجى عدم إرسال مبالغ مالية مسبقة. التقي بمقدم الخدمة في مكان آمن وعاين العمل بنفسك قبل الدفع.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       11. Add Service Modal
+       ======================================================================== -->
+  <div class="modal-overlay" id="add-service-modal">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 class="modal-title">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+          </svg>
+          <span>إضافة خدمة جديدة</span>
+        </h3>
+        <button class="modal-close-btn">&times;</button>
+      </div>
+
+      <form id="add-service-form">
+        <div class="modal-body">
+          <div style="background: var(--color-gold-subtle); border: 1px solid var(--color-gold); border-radius: var(--radius-sm); padding: 12px; margin-bottom: 18px; font-size: 0.88rem; color: var(--text-main);">
+            ℹ️ <strong>ملاحظة:</strong> يتم حفظ جميع الخدمات في قائمة المراجعة للإدارة قبل نشرها للتأكد من ملاءمة المحتوى وجودته.
+          </div>
+
+          <!-- Service Title -->
+          <div class="form-group">
+            <label class="form-label required" for="service-title">عنوان الخدمة</label>
+            <input type="text" id="service-title" name="title" class="form-control" placeholder="مثال: كهربائي منازل محترف وصيانة التوصيلات" required />
+            <span class="form-hint">اجعل العنوان واضحاً وموجزاً يصف مهارتك بدقة.</span>
+          </div>
+
+          <!-- Category & Wilaya -->
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label required" for="service-category-select">التصنيف</label>
+              <select id="service-category-select" name="category" class="form-control" required>
+                <option value="">اختر التصنيف...</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label required" for="service-wilaya-select">الولاية الجزائرية</label>
+              <select id="service-wilaya-select" name="wilaya" class="form-control" required>
+                <option value="">اختر الولاية (من 1 إلى 58)...</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Provider Name & Phone -->
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label required" for="service-provider-name">اسم مقدم الخدمة / المحل</label>
+              <input type="text" id="service-provider-name" name="providerName" class="form-control" placeholder="مثال: يوسف بلحاج أو ورشة السلام" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label required" for="service-phone">رقم الهاتف</label>
+              <input type="tel" id="service-phone" name="phone" class="form-control" placeholder="0550 12 34 56" required />
+            </div>
+          </div>
+
+          <!-- WhatsApp Number -->
+          <div class="form-group">
+            <label class="form-label" for="service-whatsapp">رقم الواتساب (اختياري - إن كان مختلفاً)</label>
+            <input type="tel" id="service-whatsapp" name="whatsapp" class="form-control" placeholder="اتركه فارغاً إن كان نفس رقم الهاتف أعلاه" />
+          </div>
+
+          <!-- Price & Negotiable -->
+          <div class="form-group">
+            <label class="form-label" for="service-price">السعر بالدينار الجزائري (DZD)</label>
+            <div style="display: flex; gap: 12px; align-items: center;">
+              <input type="number" id="service-price" name="price" class="form-control" placeholder="مثال: 3000" min="0" step="100" />
+              <label style="display: flex; align-items: center; gap: 6px; white-space: nowrap; cursor: pointer; font-size: 0.9rem;">
+                <input type="checkbox" id="service-price-negotiable" name="priceNegotiable" />
+                <span>حسب الاتفاق</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Detailed Description -->
+          <div class="form-group">
+            <label class="form-label required" for="service-description">الوصف المفصل للخدمة</label>
+            <textarea id="service-description" name="description" class="form-control" rows="4" placeholder="اذكر بالتفصيل ما تقدمه، خبرتك، أوقات العمل، والبلديات التي تتنقل إليها..." required></textarea>
+          </div>
+
+          <!-- Image Upload & Preview -->
+          <div class="form-group">
+            <label class="form-label">صورة الإعلان / الخدمة</label>
+            <div class="image-upload-zone" id="image-upload-zone" onclick="document.getElementById('service-image-input').click();">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="margin: 0 auto 10px; color: var(--color-gold);">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/>
+              </svg>
+              <div style="font-weight: 700; color: var(--text-main);">انقر لرفع صورة من جهازك</div>
+              <div class="form-hint">صيغ مدعومة: JPG, PNG, WebP (يتم تحسينها وضغطها تلقائياً)</div>
+            </div>
+            <input type="file" id="service-image-input" accept="image/*" style="display: none;" />
+
+            <div class="image-preview-container" id="image-preview-container">
+              <img id="image-preview-img" class="image-preview-img" src="" alt="معاينة" />
+              <button type="button" class="image-remove-btn" id="image-remove-btn">
+                <span>✕ حذف الصورة</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" onclick="document.getElementById('add-service-modal').classList.remove('is-active');">
+            إلغاء
+          </button>
+          <button type="submit" class="btn btn-primary">
+            إرسال الخدمة للمراجعة
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       12. Admin Passcode Login Modal
+       ======================================================================== -->
+  <div class="modal-overlay" id="admin-login-modal">
+    <div class="modal-dialog" style="max-width: 440px;">
+      <div class="modal-header">
+        <h3 class="modal-title">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+          </svg>
+          <span>دخول إدارة DZ SERVICES</span>
+        </h3>
+        <button class="modal-close-btn">&times;</button>
+      </div>
+
+      <form id="admin-login-form">
+        <div class="modal-body">
+          <div style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 18px; line-height: 1.6;">
+            أدخل رمز المرور الإداري للوصول إلى لوحة المراجعة والإشراف.
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="admin-pin-input">رمز المرور (PIN):</label>
+            <input type="password" id="admin-pin-input" class="form-control" placeholder="أدخل الرمز هنا..." autocomplete="current-password" required />
+          </div>
+
+          <div style="font-size: 0.75rem; color: #64748B; background: var(--bg-muted); padding: 8px 12px; border-radius: var(--radius-sm);">
+            🛡️ <strong>ملاحظة أمنية:</strong> هذه حماية محلية للواجهة (Client-side) مخصصة للإدارة التجريبية وحفظ البيانات في المتصفح.
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline btn-sm" onclick="document.getElementById('admin-login-modal').classList.remove('is-active');">إلغاء</button>
+          <button type="submit" class="btn btn-primary btn-sm">دخول اللوحة</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       13. Admin Dashboard Full Modal
+       ======================================================================== -->
+  <div class="modal-overlay" id="admin-dashboard-modal">
+    <div class="modal-dialog modal-dialog-lg" style="max-width: 1050px;">
+      <div class="modal-header">
+        <div style="display:flex; align-items:center; gap:10px;">
+          <h3 class="modal-title">
+            <span>لوحة التحكم الإدارية</span>
+            <span class="admin-badge">إشراف DZ SERVICES</span>
+          </h3>
+        </div>
+        <div style="display:flex; align-items:center; gap:10px;">
+          <button class="btn btn-outline btn-sm" id="admin-logout-btn" style="color:var(--color-danger); border-color:var(--color-danger);">
+            تسجيل خروج
+          </button>
+          <button class="modal-close-btn">&times;</button>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <!-- KPI stats -->
+        <div class="admin-stats-row">
+          <div class="admin-stat-card">
+            <div class="admin-stat-num" id="admin-stat-published" style="color: var(--color-success);">0</div>
+            <div class="admin-stat-text">خدمات منشورة</div>
+          </div>
+          <div class="admin-stat-card">
+            <div class="admin-stat-num" id="admin-stat-pending" style="color: var(--color-gold);">0</div>
+            <div class="admin-stat-text">قيد المراجعة</div>
+          </div>
+          <div class="admin-stat-card">
+            <div class="admin-stat-num" id="admin-stat-rejected" style="color: var(--color-danger);">0</div>
+            <div class="admin-stat-text">خدمات مرفوضة</div>
+          </div>
+          <div class="admin-stat-card">
+            <div class="admin-stat-num" id="admin-stat-categories">12</div>
+            <div class="admin-stat-text">إجمالي التصنيفات</div>
+          </div>
+        </div>
+
+        <!-- Navigation Tabs -->
+        <div class="admin-tabs">
+          <button class="admin-tab-btn active" data-tab="services">إدارة الخدمات</button>
+          <button class="admin-tab-btn" data-tab="add-service">+ إضافة خدمة مباشرة</button>
+          <button class="admin-tab-btn" data-tab="categories">إدارة التصنيفات</button>
+          <button class="admin-tab-btn" data-tab="settings">معلومات المنصة</button>
+          <button class="admin-tab-btn" data-tab="backup">النسخ الاحتياطي (JSON)</button>
+        </div>
+
+        <!-- Tab 1: Services List -->
+        <div class="admin-tab-pane" id="admin-tab-services">
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:14px; flex-wrap:wrap; gap:10px;">
+            <div style="display:flex; gap:8px;">
+              <button class="btn btn-sm btn-outline admin-status-tab active" data-status="all">الكل</button>
+              <button class="btn btn-sm btn-outline admin-status-tab" data-status="pending">قيد المراجعة ⏳</button>
+              <button class="btn btn-sm btn-outline admin-status-tab" data-status="published">المنشورة ✅</button>
+              <button class="btn btn-sm btn-outline admin-status-tab" data-status="rejected">المرفوضة ❌</button>
+            </div>
+            <span style="font-size:0.85rem; color:var(--text-muted);">قبول الخدمة ينشرها فوراً في الواجهة العامة للزوار.</span>
+          </div>
+
+          <div class="admin-table-wrapper">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>الخدمة والولاية</th>
+                  <th>مقدم الخدمة</th>
+                  <th>السعر</th>
+                  <th>الحالة</th>
+                  <th>التاريخ</th>
+                  <th>الإجراءات</th>
+                </tr>
+              </thead>
+              <tbody id="admin-services-table-body">
+                <!-- Injected via admin.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Tab 2: Admin Direct Add Service -->
+        <div class="admin-tab-pane" id="admin-tab-add-service" style="display:none;">
+          <h4 style="font-size:1.1rem; font-weight:800; margin-bottom:16px;">إضافة خدمة مباشرة (تُنشر فوراً بدون مراجعة):</h4>
+          <form id="admin-direct-add-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label required">عنوان الخدمة</label>
+                <input type="text" name="adminServiceTitle" class="form-control" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label required">التصنيف</label>
+                <select id="admin-service-category-select" name="adminServiceCategory" class="form-control" required>
+                  <option value="">اختر...</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label required">الولاية</label>
+                <select id="admin-service-wilaya-select" name="adminServiceWilaya" class="form-control" required>
+                  <option value="">اختر الولاية...</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label required">اسم مقدم الخدمة</label>
+                <input type="text" name="adminServiceProvider" class="form-control" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label required">رقم الهاتف / واتساب</label>
+                <input type="tel" name="adminServicePhone" class="form-control" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">السعر بالدينار (DZD)</label>
+                <input type="number" name="adminServicePrice" class="form-control" placeholder="0 = حسب الاتفاق" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">الوصف الكامل</label>
+              <textarea name="adminServiceDesc" class="form-control" rows="3"></textarea>
+            </div>
+
+            <div class="form-row" style="align-items:center;">
+              <div class="form-group">
+                <label class="form-label">صورة الإعلان</label>
+                <input type="file" id="admin-service-image-input" accept="image/*" class="form-control" />
+              </div>
+              <div class="form-group" style="padding-top:22px;">
+                <label style="display:flex; align-items:center; gap:8px; cursor:pointer;">
+                  <input type="checkbox" name="adminServiceFeatured" />
+                  <strong>تمييز هذه الخدمة ⭐ (تظهر في قسم الخدمات المميزة)</strong>
+                </label>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="margin-top:10px;">
+              حفظ ونشر في المنصة فوراً
+            </button>
+          </form>
+        </div>
+
+        <!-- Tab 3: Categories Manager -->
+        <div class="admin-tab-pane" id="admin-tab-categories" style="display:none;">
+          <h4 style="font-size:1.1rem; font-weight:800; margin-bottom:14px;">إدارة تصنيفات الخدمات:</h4>
+          <div style="display:flex; gap:10px; margin-bottom:20px;">
+            <input type="text" id="admin-new-category-input" class="form-control" placeholder="اسم التصنيف الجديد (مثال: تصوير درونز ومونتاج)..." />
+            <button type="button" class="btn btn-primary" id="admin-add-category-btn" style="white-space:nowrap;">
+              + إضافة تصنيف
+            </button>
+          </div>
+          <div id="admin-categories-list">
+            <!-- Categories injected dynamically -->
+          </div>
+        </div>
+
+        <!-- Tab 4: Platform Settings -->
+        <div class="admin-tab-pane" id="admin-tab-settings" style="display:none;">
+          <h4 style="font-size:1.1rem; font-weight:800; margin-bottom:14px;">تعديل معلومات وإعدادات المنصة:</h4>
+          <form id="admin-settings-form">
+            <div class="form-group">
+              <label class="form-label" for="settings-site-title">اسم المنصة</label>
+              <input type="text" id="settings-site-title" class="form-control" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="settings-contact-phone">هاتف الدعم الفني والإدارة</label>
+              <input type="tel" id="settings-contact-phone" class="form-control" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="settings-new-pin">تغيير رمز المرور الإداري (PIN)</label>
+              <input type="password" id="settings-new-pin" class="form-control" placeholder="اتركه فارغاً إذا كنت لا ترغب بتغييره" autocomplete="new-password" />
+              <span class="form-hint">الحد الأدنى 4 خانات.</span>
+            </div>
+
+            <button type="submit" class="btn btn-primary">حفظ الإعدادات</button>
+          </form>
+        </div>
+
+        <!-- Tab 5: Backup & Restore -->
+        <div class="admin-tab-pane" id="admin-tab-backup" style="display:none;">
+          <h4 style="font-size:1.1rem; font-weight:800; margin-bottom:14px;">النسخ الاحتياطي واستيراد البيانات (JSON):</h4>
+          <p style="color:var(--text-muted); font-size:0.92rem; margin-bottom:20px; line-height:1.6;">
+            يمكنك حفظ نسخة احتياطية كاملة من جميع الخدمات والتصنيفات والإعدادات إلى ملف JSON على جهازك، أو استيراد بيانات سابقة مع التحقق التلقائي من سلامة البيانات ومنع تكرار المعرفات.
+          </p>
+
+          <div style="display:flex; gap:16px; flex-wrap:wrap;">
+            <button class="btn btn-primary btn-lg" id="admin-export-backup-btn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+              <span>تصدير نسخة احتياطية (Download JSON)</span>
+            </button>
+
+            <button class="btn btn-outline btn-lg" id="admin-import-backup-btn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/>
+              </svg>
+              <span>استيراد ملف نسخة احتياطية (Upload JSON)</span>
+            </button>
+            <input type="file" id="admin-import-file-input" accept=".json,application/json" style="display:none;" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notifications Container -->
+  <div id="toast-container"></div>
+
+  <!-- Scripts -->
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
